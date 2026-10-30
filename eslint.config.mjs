@@ -9,4 +9,16 @@ export default defineConfig([
     extends: ["js/recommended"],
     languageOptions: { globals: globals.browser },
   },
+  {
+    files: ['**/*.js'],
+    languageOptions: {
+      globals: {
+        ...globals.jest,
+      },
+    },
+    rules: {
+      'no-unused-vars': 'warn',
+      'no-undef': 'warn',
+    },
+  },
 ]);
